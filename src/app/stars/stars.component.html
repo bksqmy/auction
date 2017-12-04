@@ -1,8 +1,5 @@
 <p>
-  <i *ngFor="let star of stars" class="glyphicon glyphicon-star glyphicon-star-empty"
-     [class.fa-star]="star==='full'"
-     [class.fa-star-half-o]="star==='half'"
-     [class.fa-star-o]="star==='empty'"
-  ></i>
+  <!--class.glyphicon-star-empty 样式绑定的方法  -->
+  <span *ngFor="let star of stars" class="glyphicon glyphicon-star" [class.glyphicon-star-empty]="star"></span>
   <span>{{rating}}星</span>
 </p>
