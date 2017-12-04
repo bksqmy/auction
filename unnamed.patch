@@ -1,0 +1,53 @@
+Index: src/app/product/product.component.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/app/product/product.component.ts	(date 1512366055000)
++++ src/app/product/product.component.ts	(revision )
+@@ -11,12 +11,12 @@
+   }
+   ngOnInit() {
+     this.products = [
+-      new ProductInfo(1, '第一个商品', 899, 3.5, '这是一个垃圾电脑', ['电子产品', '家电']),
+-      new ProductInfo(2, '第二个商品', 899, 3.5, '这是一个垃圾电脑', ['电子产品', '家电']),
++      new ProductInfo(1, '第一个商品', 899, 1.5, '这是一个垃圾电脑', ['电子产品', '家电']),
++      new ProductInfo(2, '第二个商品', 899, 2.5, '这是一个垃圾电脑', ['电子产品', '家电']),
+       new ProductInfo(3, '第三个商品', 899, 3.5, '这是一个垃圾电脑', ['电子产品', '家电']),
+       new ProductInfo(4, '第四个商品', 899, 3.5, '这是一个垃圾电脑', ['电子产品', '家电']),
+-      new ProductInfo(5, '第五个商品', 899, 3.5, '这是一个垃圾电脑', ['电子产品', '家电']),
+-      new ProductInfo(6, '第六个商品', 899, 3.5, '这是一个垃圾电脑', ['电子产品', '家电'])
++      new ProductInfo(5, '第五个商品', 899, 4.5, '这是一个垃圾电脑', ['电子产品', '家电']),
++      new ProductInfo(6, '第六个商品', 899, 1.5, '这是一个垃圾电脑', ['电子产品', '家电'])
+     ];
+   }
+ 
+Index: src/app/stars/stars.component.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/app/stars/stars.component.html	(date 1512366055000)
++++ src/app/stars/stars.component.html	(revision )
+@@ -1,5 +1,5 @@
+ <p>
+-  <i *ngFor="let star of stars" class="fa"
++  <i *ngFor="let star of stars" class="glyphicon glyphicon-star glyphicon-star-empty"
+      [class.fa-star]="star==='full'"
+      [class.fa-star-half-o]="star==='half'"
+      [class.fa-star-o]="star==='empty'"
+Index: src/app/product/product.component.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/app/product/product.component.html	(date 1512366055000)
++++ src/app/product/product.component.html	(revision )
+@@ -7,6 +7,7 @@
+       <p>{{ProductInfo.desc}}</p>
+     </div>
+     <div>
++      <!--数据绑定的例子-->
+       <app-stars [rating]="ProductInfo.rating"></app-stars>
+     </div>
+   </div>
