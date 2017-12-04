@@ -1,0 +1,13 @@
+<div class="col-sm-4 col-md-4 col-lg-4" *ngFor="let ProductInfo of products">
+  <div class="thumbnail">
+    <img src="http://placehold.it/320x150" alt="商品图片">
+    <div class="caption">
+      <h4 class="pull-right">￥{{ProductInfo.price}}</h4>
+      <h4><a>{{ProductInfo.title}}</a></h4>
+      <p>{{ProductInfo.desc}}</p>
+    </div>
+    <div>
+      <app-stars></app-stars>
+    </div>
+  </div>
+</div>
